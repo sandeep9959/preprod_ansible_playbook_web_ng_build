@@ -1,0 +1,34 @@
+
+insert into ftpuser(id,userid,passwd,uid,gid,homedir,shell) values (51,'pragatiftpuser','{md5}f6W46RaXkSlYS/mYw4OeQw==',6651,1042,'/usr/ftp/pragatiftpuser','/sbin/nologin');
+
+
+
+insert into ftpgroup(groupname,gid,members) values('proftpd',1042,'pragatiftpuser');
+
+
+insert into ftpuser(id,userid,passwd,uid,gid,homedir,shell) values (52,'aspiroftpuser','{md5}8E+98j3m/h6IF0F2CibJuA==',6652,1042,'/usr/ftp/aspiroftpuser','/sbin/nologin');
+
+
+ insert into ftpgroup(groupname,gid,members) values('proftpd',1042,'aspiroftpuser');
+ 
+ 
+ 
+ 
+ aspiroftpuser
+ pragatiftpuser
+ 
+ 
+ 
+ /usr/ftp/pragatiftpuser/inbound IN_CLOSE_WRITE bash /var/www/html/ftp/script/ftp.sh $@ $#
+ /usr/ftp/aspiroftpuser/inbound IN_CLOSE_WRITE bash /var/www/html/ftp/script/ftp.sh $@ $#
+ 
+ 
+ pragatiftpuser
+ 6651
+ 
+ aspiroftpuser
+ 6652
+ 
+ 
+ 
+ 
